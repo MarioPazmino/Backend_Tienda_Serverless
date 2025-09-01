@@ -4,7 +4,7 @@ service: backend-tienda-serverless
 
 provider:
   name: aws
-  runtime: nodejs18.x
+  runtime: nodejs22.x
   region: us-east-1
   environment:
     MONGODB_URI: ${env:MONGODB_URI}
