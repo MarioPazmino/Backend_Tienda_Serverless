@@ -7,7 +7,7 @@ const sanitizeHtml = require('sanitize-html');
 
 module.exports.handler = async (event) => {
   const corsHeaders = {
-    "Access-Control-Allow-Origin": process.env.CORS_ORIGIN || "*",
+    "Access-Control-Allow-Origin": process.env.CORS_ORIGIN,
     "Access-Control-Allow-Credentials": true
   };
   try {
