@@ -1,19 +1,31 @@
+
 const { connect } = require('../../config.db');
 const adminService = require('../../services/admin.service');
+const Joi = require('joi');
+const sanitizeHtml = require('sanitize-html');
 
 module.exports.handler = async (event) => {
   try {
     await connect();
     const { id } = event.pathParameters;
     const body = typeof event.body === 'string' ? JSON.parse(event.body) : event.body;
-    const { fechaExpiracion } = body;
-    if (!fechaExpiracion) {
+
+    // Validación con Joi
+    const schema = Joi.object({
+      fechaExpiracion: Joi.date().iso().required()
+    });
+    const { error, value } = schema.validate(body);
+    if (error) {
       return {
         statusCode: 400,
-        body: JSON.stringify({ error: 'La fecha de expiración es requerida.' })
+        body: JSON.stringify({ error: error.details[0].message })
       };
     }
-    const updated = await adminService.setFechaExpiracion(id, fechaExpiracion);
+
+    // Sanitizar id
+    const cleanId = sanitizeHtml(id);
+
+    const updated = await adminService.setFechaExpiracion(cleanId, value.fechaExpiracion);
     if (!updated) {
       return {
         statusCode: 404,
