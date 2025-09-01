@@ -1,14 +1,23 @@
-  
-  
 service: backend-tienda-serverless
 
 provider:
   name: aws
-  runtime: nodejs22.x
-  region: us-east-1
+  runtime: nodejs20.x
+  region: us-east-2
   environment:
-    MONGODB_URI: ${env:MONGODB_URI}
-    JWT_SECRET: ${env:JWT_SECRET}
+    MONGODB_URI: ${.env:MONGODB_URI}
+    JWT_SECRET: ${.env:JWT_SECRET}
+  apiGateway:
+    minimumCompressionSize: 1024
+    throttle:
+      burstLimit: 15
+      rateLimit: 120
+
+custom:
+  # usagePlan eliminado porque ya no se usan API Keys
+  prune:
+    automatic: true
+    number: 1
 
 functions:
   adminLogin:
@@ -18,6 +27,7 @@ functions:
           path: admin/login
           method: post
           cors: true
+          # ...existing code...
   adminRegister:
     handler: src/functions/admin/register.handler
     events:
@@ -25,6 +35,7 @@ functions:
           path: admin/register
           method: post
           cors: true
+          # ...existing code...
   getAllProducts:
     handler: src/functions/product/getAll.handler
     events:
@@ -46,6 +57,7 @@ functions:
           path: clicks
           method: get
           cors: true
+          private: true
   countClicksByProduct:
     handler: src/functions/click/countByProduct.handler
     events:
@@ -53,6 +65,7 @@ functions:
           path: clicks/by-product
           method: get
           cors: true
+          private: true
   getCommentStatsByProduct:
     handler: src/functions/comment/getStatsByProduct.handler
     events:
@@ -88,6 +101,7 @@ functions:
           path: products
           method: post
           cors: true
+          private: true
   updateProduct:
     handler: src/functions/product/update.handler
     events:
@@ -95,6 +109,7 @@ functions:
           path: products/{id}
           method: put
           cors: true
+          private: true
   deleteProduct:
     handler: src/functions/product/delete.handler
     events:
@@ -102,6 +117,7 @@ functions:
           path: products/{id}
           method: delete
           cors: true
+          private: true
   deleteAdmin:
     handler: src/functions/admin/delete.handler
     events:
@@ -109,6 +125,7 @@ functions:
           path: admin/{id}
           method: delete
           cors: true
+          private: true
   setAdminFechaExpiracion:
     handler: src/functions/admin/setFechaExpiracion.handler
     events:
@@ -116,6 +133,7 @@ functions:
           path: admin/{id}/fecha-expiracion
           method: patch
           cors: true
+          private: true
   setAdminActive:
     handler: src/functions/admin/setActive.handler
     events:
@@ -123,6 +141,7 @@ functions:
           path: admin/{id}/active
           method: patch
           cors: true
+          private: true
   desactivarAdminsVencidos:
     handler: src/functions/admin/desactivarVencidos.handler
     events:
@@ -137,5 +156,8 @@ functions:
           path: admin/change-password
           method: post
           cors: true
+          private: true
 plugins:
   - serverless-dotenv-plugin
+  - serverless-prune-plugin
+
