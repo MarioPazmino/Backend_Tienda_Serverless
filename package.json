@@ -1,0 +1,26 @@
+{
+  "name": "backend_tienda_serverless",
+  "version": "1.0.0",
+  "description": "Backend_Tienda_Serverless",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarioPazmino/Backend_Tienda_Serverless.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarioPazmino/Backend_Tienda_Serverless/issues"
+  },
+  "homepage": "https://github.com/MarioPazmino/Backend_Tienda_Serverless#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "joi": "^18.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.0"
+  }
+}
