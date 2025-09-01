@@ -1,31 +1,9 @@
 {
-  "name": "backend_tienda_serverless",
+  "name": "backend-tienda-serverless",
   "version": "1.0.0",
-  "description": "Backend_Tienda_Serverless",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MarioPazmino/Backend_Tienda_Serverless.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MarioPazmino/Backend_Tienda_Serverless/issues"
-  },
-  "homepage": "https://github.com/MarioPazmino/Backend_Tienda_Serverless#readme",
-  "dependencies": {
-    "bcryptjs": "^3.0.2",
-    "joi": "^18.0.1",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.18.0",
-    "sanitize-html": "^2.17.0"
-  },
   "devDependencies": {
-    "serverless-dotenv-plugin": "^6.0.0",
-    "serverless-prune-plugin": "^2.1.0"
+    "serverless": "^3.33.0",
+    "serverless-dotenv-plugin": "^4.0.2",
+    "serverless-prune-plugin": "^2.0.0"
   }
 }

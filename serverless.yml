@@ -22,6 +22,8 @@ custom:
 functions:
   adminLogin:
     handler: src/functions/admin/login.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
     events:
       - http:
           path: admin/login
@@ -30,6 +32,8 @@ functions:
           # ...existing code...
   adminRegister:
     handler: src/functions/admin/register.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
     events:
       - http:
           path: admin/register
@@ -38,6 +42,8 @@ functions:
           # ...existing code...
   getAllProducts:
     handler: src/functions/product/getAll.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
     events:
       - http:
           path: products
@@ -45,6 +51,8 @@ functions:
           cors: true
   registerClick:
     handler: src/functions/click/registerClick.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
     events:
       - http:
           path: clicks
@@ -52,6 +60,8 @@ functions:
           cors: true
   getClickStats:
     handler: src/functions/click/getStats.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
     events:
       - http:
           path: clicks
@@ -60,6 +70,8 @@ functions:
           private: true
   countClicksByProduct:
     handler: src/functions/click/countByProduct.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
     events:
       - http:
           path: clicks/by-product
@@ -68,6 +80,8 @@ functions:
           private: true
   getCommentStatsByProduct:
     handler: src/functions/comment/getStatsByProduct.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
     events:
       - http:
           path: comments/product/{productId}/stats
@@ -75,6 +89,8 @@ functions:
           cors: true
   createComment:
     handler: src/functions/comment/create.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
     events:
       - http:
           path: comments
@@ -82,6 +98,8 @@ functions:
           cors: true
   getCommentsByProduct:
     handler: src/functions/comment/getByProduct.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
     events:
       - http:
           path: comments/product/{productId}
@@ -89,6 +107,8 @@ functions:
           cors: true
   getProductById:
     handler: src/functions/product/getById.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
     events:
       - http:
           path: products/{id}
@@ -96,6 +116,8 @@ functions:
           cors: true
   createProduct:
     handler: src/functions/product/create.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
     events:
       - http:
           path: products
@@ -104,6 +126,8 @@ functions:
           private: true
   updateProduct:
     handler: src/functions/product/update.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
     events:
       - http:
           path: products/{id}
@@ -112,6 +136,8 @@ functions:
           private: true
   deleteProduct:
     handler: src/functions/product/delete.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
     events:
       - http:
           path: products/{id}
@@ -120,6 +146,8 @@ functions:
           private: true
   deleteAdmin:
     handler: src/functions/admin/delete.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
     events:
       - http:
           path: admin/{id}
@@ -128,6 +156,8 @@ functions:
           private: true
   setAdminFechaExpiracion:
     handler: src/functions/admin/setFechaExpiracion.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
     events:
       - http:
           path: admin/{id}/fecha-expiracion
@@ -136,6 +166,8 @@ functions:
           private: true
   setAdminActive:
     handler: src/functions/admin/setActive.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
     events:
       - http:
           path: admin/{id}/active
@@ -144,6 +176,8 @@ functions:
           private: true
   desactivarAdminsVencidos:
     handler: src/functions/admin/desactivarVencidos.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
     events:
       - schedule:
           rate: cron(0 2 * * ? *)
@@ -151,6 +185,8 @@ functions:
     description: 'Desactiva automáticamente los admins vencidos todos los días a las 2am UTC'
   changeAdminPassword:
     handler: src/functions/admin/changePassword.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
     events:
       - http:
           path: admin/change-password
@@ -160,4 +196,8 @@ functions:
 plugins:
   - serverless-dotenv-plugin
   - serverless-prune-plugin
+
+layers:
+  nodeModules:
+    path: layer
 
