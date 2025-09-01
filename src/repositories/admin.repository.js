@@ -13,8 +13,17 @@ class AdminRepository {
         return Admin.findByIdAndUpdate(id, { fechaExpiracion }, { new: true });
     }
 
+
     async delete(id) {
         return Admin.findByIdAndDelete(id);
+    }
+
+    async updatePassword(id, newPassword) {
+        const admin = await Admin.findById(id);
+        if (!admin) return null;
+        admin.password = newPassword;
+        await admin.save();
+        return admin;
     }
 }
 

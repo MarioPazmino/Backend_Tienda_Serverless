@@ -1,4 +1,5 @@
   
+  
 service: backend-tienda-serverless
 
 provider:
@@ -121,6 +122,20 @@ functions:
       - http:
           path: admin/{id}/active
           method: patch
+          cors: true
+  desactivarAdminsVencidos:
+    handler: src/functions/admin/desactivarVencidos.handler
+    events:
+      - schedule:
+          rate: cron(0 2 * * ? *)
+          enabled: true
+    description: 'Desactiva automáticamente los admins vencidos todos los días a las 2am UTC'
+  changeAdminPassword:
+    handler: src/functions/admin/changePassword.handler
+    events:
+      - http:
+          path: admin/change-password
+          method: post
           cors: true
 plugins:
   - serverless-dotenv-plugin

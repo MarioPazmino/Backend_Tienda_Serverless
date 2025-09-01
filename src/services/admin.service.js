@@ -24,6 +24,10 @@ class AdminService {
     async delete(id) {
         return adminRepository.delete(id);
     }
+    
+    async changePassword(id, newPassword) {
+        return adminRepository.updatePassword(id, newPassword);
+    }
 }
 
 module.exports = new AdminService();
