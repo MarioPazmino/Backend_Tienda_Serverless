@@ -12,6 +12,18 @@ class AdminService {
     async register({ username, password }) {
         return adminRepository.create({ username, password });
     }
+
+    async setActive(id, activo) {
+        return adminRepository.setActive(id, activo);
+    }
+
+    async setFechaExpiracion(id, fechaExpiracion) {
+        return adminRepository.setFechaExpiracion(id, fechaExpiracion);
+    }
+
+    async delete(id) {
+        return adminRepository.delete(id);
+    }
 }
 
 module.exports = new AdminService();

@@ -1,3 +1,4 @@
+  
 service: backend-tienda-serverless
 
 provider:
@@ -22,6 +23,104 @@ functions:
       - http:
           path: admin/register
           method: post
+          cors: true
+  getAllProducts:
+    handler: src/functions/product/getAll.handler
+    events:
+      - http:
+          path: products
+          method: get
+          cors: true
+  registerClick:
+    handler: src/functions/click/registerClick.handler
+    events:
+      - http:
+          path: clicks
+          method: post
+          cors: true
+  getClickStats:
+    handler: src/functions/click/getStats.handler
+    events:
+      - http:
+          path: clicks
+          method: get
+          cors: true
+  countClicksByProduct:
+    handler: src/functions/click/countByProduct.handler
+    events:
+      - http:
+          path: clicks/by-product
+          method: get
+          cors: true
+  getCommentStatsByProduct:
+    handler: src/functions/comment/getStatsByProduct.handler
+    events:
+      - http:
+          path: comments/product/{productId}/stats
+          method: get
+          cors: true
+  createComment:
+    handler: src/functions/comment/create.handler
+    events:
+      - http:
+          path: comments
+          method: post
+          cors: true
+  getCommentsByProduct:
+    handler: src/functions/comment/getByProduct.handler
+    events:
+      - http:
+          path: comments/product/{productId}
+          method: get
+          cors: true
+  getProductById:
+    handler: src/functions/product/getById.handler
+    events:
+      - http:
+          path: products/{id}
+          method: get
+          cors: true
+  createProduct:
+    handler: src/functions/product/create.handler
+    events:
+      - http:
+          path: products
+          method: post
+          cors: true
+  updateProduct:
+    handler: src/functions/product/update.handler
+    events:
+      - http:
+          path: products/{id}
+          method: put
+          cors: true
+  deleteProduct:
+    handler: src/functions/product/delete.handler
+    events:
+      - http:
+          path: products/{id}
+          method: delete
+          cors: true
+  deleteAdmin:
+    handler: src/functions/admin/delete.handler
+    events:
+      - http:
+          path: admin/{id}
+          method: delete
+          cors: true
+  setAdminFechaExpiracion:
+    handler: src/functions/admin/setFechaExpiracion.handler
+    events:
+      - http:
+          path: admin/{id}/fecha-expiracion
+          method: patch
+          cors: true
+  setAdminActive:
+    handler: src/functions/admin/setActive.handler
+    events:
+      - http:
+          path: admin/{id}/active
+          method: patch
           cors: true
 plugins:
   - serverless-dotenv-plugin
