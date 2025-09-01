@@ -1,0 +1,27 @@
+service: backend-tienda-serverless
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  environment:
+    MONGODB_URI: ${env:MONGODB_URI}
+    JWT_SECRET: ${env:JWT_SECRET}
+
+functions:
+  adminLogin:
+    handler: src/functions/admin/login.handler
+    events:
+      - http:
+          path: admin/login
+          method: post
+          cors: true
+  adminRegister:
+    handler: src/functions/admin/register.handler
+    events:
+      - http:
+          path: admin/register
+          method: post
+          cors: true
+plugins:
+  - serverless-dotenv-plugin
