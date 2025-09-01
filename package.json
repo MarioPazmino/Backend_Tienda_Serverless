@@ -5,5 +5,8 @@
     "serverless": "^3.33.0",
     "serverless-dotenv-plugin": "^4.0.2",
     "serverless-prune-plugin": "^2.0.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2"
   }
 }

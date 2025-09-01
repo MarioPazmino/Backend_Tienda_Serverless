@@ -6,6 +6,10 @@ const Joi = require('joi');
 const sanitizeHtml = require('sanitize-html');
 
 module.exports.handler = async (event) => {
+  const corsHeaders = {
+    "Access-Control-Allow-Origin": process.env.CORS_ORIGIN || "*",
+    "Access-Control-Allow-Credentials": true
+  };
   try {
     await connect();
     const body = typeof event.body === 'string' ? JSON.parse(event.body) : event.body;
@@ -19,6 +23,7 @@ module.exports.handler = async (event) => {
     if (error) {
       return {
         statusCode: 400,
+        headers: corsHeaders,
         body: JSON.stringify({ error: error.details[0].message })
       };
     }
@@ -30,17 +35,20 @@ module.exports.handler = async (event) => {
     if (!admin) {
       return {
         statusCode: 401,
+        headers: corsHeaders,
         body: JSON.stringify({ error: 'Credenciales inválidas' })
       };
     }
     const token = jwt.sign({ id: admin._id, username: admin.username }, process.env.JWT_SECRET, { expiresIn: '1d' });
     return {
       statusCode: 200,
+      headers: corsHeaders,
       body: JSON.stringify({ token })
     };
   } catch (err) {
     return {
       statusCode: 400,
+      headers: corsHeaders,
       body: JSON.stringify({ error: err.message })
     };
   }

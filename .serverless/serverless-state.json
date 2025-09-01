@@ -10,7 +10,8 @@
       "region": "us-east-2",
       "environment": {
         "MONGODB_URI": "mongodb+srv://mariopazmino78_db_user:gfcz2ZoWeswi4oFF@cluster0.kioshu4.mongodb.net/tienda?retryWrites=true&w=majority",
-        "JWT_SECRET": "supersecreto123"
+        "JWT_SECRET": "supersecreto123",
+        "CORS_ORIGIN": "http://localhost:3000"
       },
       "apiGateway": {
         "minimumCompressionSize": 1024,
@@ -299,7 +300,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/backend-tienda-serverless/dev/1756739625357-2025-09-01T15:13:45.357Z/backend-tienda-serverless.zip"
+                "S3Key": "serverless/backend-tienda-serverless/dev/1756760918666-2025-09-01T21:08:38.666Z/backend-tienda-serverless.zip"
               },
               "Handler": "src/functions/admin/login.handler",
               "Runtime": "nodejs20.x",
@@ -309,7 +310,8 @@
               "Environment": {
                 "Variables": {
                   "MONGODB_URI": "mongodb+srv://mariopazmino78_db_user:gfcz2ZoWeswi4oFF@cluster0.kioshu4.mongodb.net/tienda?retryWrites=true&w=majority",
-                  "JWT_SECRET": "supersecreto123"
+                  "JWT_SECRET": "supersecreto123",
+                  "CORS_ORIGIN": "http://localhost:3000"
                 }
               },
               "Role": {
@@ -335,7 +337,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/backend-tienda-serverless/dev/1756739625357-2025-09-01T15:13:45.357Z/backend-tienda-serverless.zip"
+                "S3Key": "serverless/backend-tienda-serverless/dev/1756760918666-2025-09-01T21:08:38.666Z/backend-tienda-serverless.zip"
               },
               "Handler": "src/functions/admin/register.handler",
               "Runtime": "nodejs20.x",
@@ -345,7 +347,8 @@
               "Environment": {
                 "Variables": {
                   "MONGODB_URI": "mongodb+srv://mariopazmino78_db_user:gfcz2ZoWeswi4oFF@cluster0.kioshu4.mongodb.net/tienda?retryWrites=true&w=majority",
-                  "JWT_SECRET": "supersecreto123"
+                  "JWT_SECRET": "supersecreto123",
+                  "CORS_ORIGIN": "http://localhost:3000"
                 }
               },
               "Role": {
@@ -371,7 +374,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/backend-tienda-serverless/dev/1756739625357-2025-09-01T15:13:45.357Z/backend-tienda-serverless.zip"
+                "S3Key": "serverless/backend-tienda-serverless/dev/1756760918666-2025-09-01T21:08:38.666Z/backend-tienda-serverless.zip"
               },
               "Handler": "src/functions/product/getAll.handler",
               "Runtime": "nodejs20.x",
@@ -381,7 +384,8 @@
               "Environment": {
                 "Variables": {
                   "MONGODB_URI": "mongodb+srv://mariopazmino78_db_user:gfcz2ZoWeswi4oFF@cluster0.kioshu4.mongodb.net/tienda?retryWrites=true&w=majority",
-                  "JWT_SECRET": "supersecreto123"
+                  "JWT_SECRET": "supersecreto123",
+                  "CORS_ORIGIN": "http://localhost:3000"
                 }
               },
               "Role": {
@@ -407,7 +411,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/backend-tienda-serverless/dev/1756739625357-2025-09-01T15:13:45.357Z/backend-tienda-serverless.zip"
+                "S3Key": "serverless/backend-tienda-serverless/dev/1756760918666-2025-09-01T21:08:38.666Z/backend-tienda-serverless.zip"
               },
               "Handler": "src/functions/click/registerClick.handler",
               "Runtime": "nodejs20.x",
@@ -417,7 +421,8 @@
               "Environment": {
                 "Variables": {
                   "MONGODB_URI": "mongodb+srv://mariopazmino78_db_user:gfcz2ZoWeswi4oFF@cluster0.kioshu4.mongodb.net/tienda?retryWrites=true&w=majority",
-                  "JWT_SECRET": "supersecreto123"
+                  "JWT_SECRET": "supersecreto123",
+                  "CORS_ORIGIN": "http://localhost:3000"
                 }
               },
               "Role": {
@@ -443,7 +448,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/backend-tienda-serverless/dev/1756739625357-2025-09-01T15:13:45.357Z/backend-tienda-serverless.zip"
+                "S3Key": "serverless/backend-tienda-serverless/dev/1756760918666-2025-09-01T21:08:38.666Z/backend-tienda-serverless.zip"
               },
               "Handler": "src/functions/click/getStats.handler",
               "Runtime": "nodejs20.x",
@@ -453,7 +458,8 @@
               "Environment": {
                 "Variables": {
                   "MONGODB_URI": "mongodb+srv://mariopazmino78_db_user:gfcz2ZoWeswi4oFF@cluster0.kioshu4.mongodb.net/tienda?retryWrites=true&w=majority",
-                  "JWT_SECRET": "supersecreto123"
+                  "JWT_SECRET": "supersecreto123",
+                  "CORS_ORIGIN": "http://localhost:3000"
                 }
               },
               "Role": {
@@ -479,7 +485,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/backend-tienda-serverless/dev/1756739625357-2025-09-01T15:13:45.357Z/backend-tienda-serverless.zip"
+                "S3Key": "serverless/backend-tienda-serverless/dev/1756760918666-2025-09-01T21:08:38.666Z/backend-tienda-serverless.zip"
               },
               "Handler": "src/functions/click/countByProduct.handler",
               "Runtime": "nodejs20.x",
@@ -489,7 +495,8 @@
               "Environment": {
                 "Variables": {
                   "MONGODB_URI": "mongodb+srv://mariopazmino78_db_user:gfcz2ZoWeswi4oFF@cluster0.kioshu4.mongodb.net/tienda?retryWrites=true&w=majority",
-                  "JWT_SECRET": "supersecreto123"
+                  "JWT_SECRET": "supersecreto123",
+                  "CORS_ORIGIN": "http://localhost:3000"
                 }
               },
               "Role": {
@@ -515,7 +522,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/backend-tienda-serverless/dev/1756739625357-2025-09-01T15:13:45.357Z/backend-tienda-serverless.zip"
+                "S3Key": "serverless/backend-tienda-serverless/dev/1756760918666-2025-09-01T21:08:38.666Z/backend-tienda-serverless.zip"
               },
               "Handler": "src/functions/comment/getStatsByProduct.handler",
               "Runtime": "nodejs20.x",
@@ -525,7 +532,8 @@
               "Environment": {
                 "Variables": {
                   "MONGODB_URI": "mongodb+srv://mariopazmino78_db_user:gfcz2ZoWeswi4oFF@cluster0.kioshu4.mongodb.net/tienda?retryWrites=true&w=majority",
-                  "JWT_SECRET": "supersecreto123"
+                  "JWT_SECRET": "supersecreto123",
+                  "CORS_ORIGIN": "http://localhost:3000"
                 }
               },
               "Role": {
@@ -551,7 +559,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/backend-tienda-serverless/dev/1756739625357-2025-09-01T15:13:45.357Z/backend-tienda-serverless.zip"
+                "S3Key": "serverless/backend-tienda-serverless/dev/1756760918666-2025-09-01T21:08:38.666Z/backend-tienda-serverless.zip"
               },
               "Handler": "src/functions/comment/create.handler",
               "Runtime": "nodejs20.x",
@@ -561,7 +569,8 @@
               "Environment": {
                 "Variables": {
                   "MONGODB_URI": "mongodb+srv://mariopazmino78_db_user:gfcz2ZoWeswi4oFF@cluster0.kioshu4.mongodb.net/tienda?retryWrites=true&w=majority",
-                  "JWT_SECRET": "supersecreto123"
+                  "JWT_SECRET": "supersecreto123",
+                  "CORS_ORIGIN": "http://localhost:3000"
                 }
               },
               "Role": {
@@ -587,7 +596,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/backend-tienda-serverless/dev/1756739625357-2025-09-01T15:13:45.357Z/backend-tienda-serverless.zip"
+                "S3Key": "serverless/backend-tienda-serverless/dev/1756760918666-2025-09-01T21:08:38.666Z/backend-tienda-serverless.zip"
               },
               "Handler": "src/functions/comment/getByProduct.handler",
               "Runtime": "nodejs20.x",
@@ -597,7 +606,8 @@
               "Environment": {
                 "Variables": {
                   "MONGODB_URI": "mongodb+srv://mariopazmino78_db_user:gfcz2ZoWeswi4oFF@cluster0.kioshu4.mongodb.net/tienda?retryWrites=true&w=majority",
-                  "JWT_SECRET": "supersecreto123"
+                  "JWT_SECRET": "supersecreto123",
+                  "CORS_ORIGIN": "http://localhost:3000"
                 }
               },
               "Role": {
@@ -623,7 +633,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/backend-tienda-serverless/dev/1756739625357-2025-09-01T15:13:45.357Z/backend-tienda-serverless.zip"
+                "S3Key": "serverless/backend-tienda-serverless/dev/1756760918666-2025-09-01T21:08:38.666Z/backend-tienda-serverless.zip"
               },
               "Handler": "src/functions/product/getById.handler",
               "Runtime": "nodejs20.x",
@@ -633,7 +643,8 @@
               "Environment": {
                 "Variables": {
                   "MONGODB_URI": "mongodb+srv://mariopazmino78_db_user:gfcz2ZoWeswi4oFF@cluster0.kioshu4.mongodb.net/tienda?retryWrites=true&w=majority",
-                  "JWT_SECRET": "supersecreto123"
+                  "JWT_SECRET": "supersecreto123",
+                  "CORS_ORIGIN": "http://localhost:3000"
                 }
               },
               "Role": {
@@ -659,7 +670,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/backend-tienda-serverless/dev/1756739625357-2025-09-01T15:13:45.357Z/backend-tienda-serverless.zip"
+                "S3Key": "serverless/backend-tienda-serverless/dev/1756760918666-2025-09-01T21:08:38.666Z/backend-tienda-serverless.zip"
               },
               "Handler": "src/functions/product/create.handler",
               "Runtime": "nodejs20.x",
@@ -669,7 +680,8 @@
               "Environment": {
                 "Variables": {
                   "MONGODB_URI": "mongodb+srv://mariopazmino78_db_user:gfcz2ZoWeswi4oFF@cluster0.kioshu4.mongodb.net/tienda?retryWrites=true&w=majority",
-                  "JWT_SECRET": "supersecreto123"
+                  "JWT_SECRET": "supersecreto123",
+                  "CORS_ORIGIN": "http://localhost:3000"
                 }
               },
               "Role": {
@@ -695,7 +707,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/backend-tienda-serverless/dev/1756739625357-2025-09-01T15:13:45.357Z/backend-tienda-serverless.zip"
+                "S3Key": "serverless/backend-tienda-serverless/dev/1756760918666-2025-09-01T21:08:38.666Z/backend-tienda-serverless.zip"
               },
               "Handler": "src/functions/product/update.handler",
               "Runtime": "nodejs20.x",
@@ -705,7 +717,8 @@
               "Environment": {
                 "Variables": {
                   "MONGODB_URI": "mongodb+srv://mariopazmino78_db_user:gfcz2ZoWeswi4oFF@cluster0.kioshu4.mongodb.net/tienda?retryWrites=true&w=majority",
-                  "JWT_SECRET": "supersecreto123"
+                  "JWT_SECRET": "supersecreto123",
+                  "CORS_ORIGIN": "http://localhost:3000"
                 }
               },
               "Role": {
@@ -731,7 +744,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/backend-tienda-serverless/dev/1756739625357-2025-09-01T15:13:45.357Z/backend-tienda-serverless.zip"
+                "S3Key": "serverless/backend-tienda-serverless/dev/1756760918666-2025-09-01T21:08:38.666Z/backend-tienda-serverless.zip"
               },
               "Handler": "src/functions/product/delete.handler",
               "Runtime": "nodejs20.x",
@@ -741,7 +754,8 @@
               "Environment": {
                 "Variables": {
                   "MONGODB_URI": "mongodb+srv://mariopazmino78_db_user:gfcz2ZoWeswi4oFF@cluster0.kioshu4.mongodb.net/tienda?retryWrites=true&w=majority",
-                  "JWT_SECRET": "supersecreto123"
+                  "JWT_SECRET": "supersecreto123",
+                  "CORS_ORIGIN": "http://localhost:3000"
                 }
               },
               "Role": {
@@ -767,7 +781,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/backend-tienda-serverless/dev/1756739625357-2025-09-01T15:13:45.357Z/backend-tienda-serverless.zip"
+                "S3Key": "serverless/backend-tienda-serverless/dev/1756760918666-2025-09-01T21:08:38.666Z/backend-tienda-serverless.zip"
               },
               "Handler": "src/functions/admin/delete.handler",
               "Runtime": "nodejs20.x",
@@ -777,7 +791,8 @@
               "Environment": {
                 "Variables": {
                   "MONGODB_URI": "mongodb+srv://mariopazmino78_db_user:gfcz2ZoWeswi4oFF@cluster0.kioshu4.mongodb.net/tienda?retryWrites=true&w=majority",
-                  "JWT_SECRET": "supersecreto123"
+                  "JWT_SECRET": "supersecreto123",
+                  "CORS_ORIGIN": "http://localhost:3000"
                 }
               },
               "Role": {
@@ -803,7 +818,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/backend-tienda-serverless/dev/1756739625357-2025-09-01T15:13:45.357Z/backend-tienda-serverless.zip"
+                "S3Key": "serverless/backend-tienda-serverless/dev/1756760918666-2025-09-01T21:08:38.666Z/backend-tienda-serverless.zip"
               },
               "Handler": "src/functions/admin/setFechaExpiracion.handler",
               "Runtime": "nodejs20.x",
@@ -813,7 +828,8 @@
               "Environment": {
                 "Variables": {
                   "MONGODB_URI": "mongodb+srv://mariopazmino78_db_user:gfcz2ZoWeswi4oFF@cluster0.kioshu4.mongodb.net/tienda?retryWrites=true&w=majority",
-                  "JWT_SECRET": "supersecreto123"
+                  "JWT_SECRET": "supersecreto123",
+                  "CORS_ORIGIN": "http://localhost:3000"
                 }
               },
               "Role": {
@@ -839,7 +855,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/backend-tienda-serverless/dev/1756739625357-2025-09-01T15:13:45.357Z/backend-tienda-serverless.zip"
+                "S3Key": "serverless/backend-tienda-serverless/dev/1756760918666-2025-09-01T21:08:38.666Z/backend-tienda-serverless.zip"
               },
               "Handler": "src/functions/admin/setActive.handler",
               "Runtime": "nodejs20.x",
@@ -849,7 +865,8 @@
               "Environment": {
                 "Variables": {
                   "MONGODB_URI": "mongodb+srv://mariopazmino78_db_user:gfcz2ZoWeswi4oFF@cluster0.kioshu4.mongodb.net/tienda?retryWrites=true&w=majority",
-                  "JWT_SECRET": "supersecreto123"
+                  "JWT_SECRET": "supersecreto123",
+                  "CORS_ORIGIN": "http://localhost:3000"
                 }
               },
               "Role": {
@@ -875,7 +892,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/backend-tienda-serverless/dev/1756739625357-2025-09-01T15:13:45.357Z/backend-tienda-serverless.zip"
+                "S3Key": "serverless/backend-tienda-serverless/dev/1756760918666-2025-09-01T21:08:38.666Z/backend-tienda-serverless.zip"
               },
               "Handler": "src/functions/admin/desactivarVencidos.handler",
               "Runtime": "nodejs20.x",
@@ -886,7 +903,8 @@
               "Environment": {
                 "Variables": {
                   "MONGODB_URI": "mongodb+srv://mariopazmino78_db_user:gfcz2ZoWeswi4oFF@cluster0.kioshu4.mongodb.net/tienda?retryWrites=true&w=majority",
-                  "JWT_SECRET": "supersecreto123"
+                  "JWT_SECRET": "supersecreto123",
+                  "CORS_ORIGIN": "http://localhost:3000"
                 }
               },
               "Role": {
@@ -912,7 +930,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/backend-tienda-serverless/dev/1756739625357-2025-09-01T15:13:45.357Z/backend-tienda-serverless.zip"
+                "S3Key": "serverless/backend-tienda-serverless/dev/1756760918666-2025-09-01T21:08:38.666Z/backend-tienda-serverless.zip"
               },
               "Handler": "src/functions/admin/changePassword.handler",
               "Runtime": "nodejs20.x",
@@ -922,7 +940,8 @@
               "Environment": {
                 "Variables": {
                   "MONGODB_URI": "mongodb+srv://mariopazmino78_db_user:gfcz2ZoWeswi4oFF@cluster0.kioshu4.mongodb.net/tienda?retryWrites=true&w=majority",
-                  "JWT_SECRET": "supersecreto123"
+                  "JWT_SECRET": "supersecreto123",
+                  "CORS_ORIGIN": "http://localhost:3000"
                 }
               },
               "Role": {
@@ -941,185 +960,185 @@
               "ChangeAdminPasswordLogGroup"
             ]
           },
-          "AdminLoginLambdaVersion3tBTkaCl0jz72w14QvTyE2qcHv3RxOlUrGQ9ubQ": {
+          "AdminLoginLambdaVersionRXuc8FCzwMpegveAxCjCkHGCTWLFn0pTEwP5DkJOrs": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AdminLoginLambdaFunction"
               },
-              "CodeSha256": "seagNfbIGA1Rj7HXnSu+eUDtQISPJrmSsGjE0z98o60="
+              "CodeSha256": "4VQeTmBub1bUwiybkvcmWkFVsDkhoGACARQeWrF7n0s="
             }
           },
-          "AdminRegisterLambdaVersion1fgCQqUBuENpEL240A8y2nAlZvlaL9LXRiLGxWkUs8": {
+          "AdminRegisterLambdaVersionnOhaHLLxie0CBWkHihgZwjzibwplzQVVysjj6RZM9Y": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AdminRegisterLambdaFunction"
               },
-              "CodeSha256": "seagNfbIGA1Rj7HXnSu+eUDtQISPJrmSsGjE0z98o60="
+              "CodeSha256": "4VQeTmBub1bUwiybkvcmWkFVsDkhoGACARQeWrF7n0s="
             }
           },
-          "GetAllProductsLambdaVersionvuupBdLzYfx45oDA5R4Ggp4cTfEmclkjehWckIFEs": {
+          "GetAllProductsLambdaVersionz1yHAb3OgYQ97V7CNBLokY4qDzfDz7RBDlLSxfk8": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetAllProductsLambdaFunction"
               },
-              "CodeSha256": "seagNfbIGA1Rj7HXnSu+eUDtQISPJrmSsGjE0z98o60="
+              "CodeSha256": "4VQeTmBub1bUwiybkvcmWkFVsDkhoGACARQeWrF7n0s="
             }
           },
-          "RegisterClickLambdaVersionDX8161ri0mMEWc0EL3gc7PIe2LQO0Qm1CNnQjnTrQec": {
+          "RegisterClickLambdaVersiong3m27ZC7c06agyqH8J0W30OFbieQoyPzNEes7u5FAI": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "RegisterClickLambdaFunction"
               },
-              "CodeSha256": "seagNfbIGA1Rj7HXnSu+eUDtQISPJrmSsGjE0z98o60="
+              "CodeSha256": "4VQeTmBub1bUwiybkvcmWkFVsDkhoGACARQeWrF7n0s="
             }
           },
-          "GetClickStatsLambdaVersionHctGIx7BokjCZr1rlMWmz96q5cVl1QYKkagksWTTtgQ": {
+          "GetClickStatsLambdaVersion85EBmFLx7RitZJDrScwPujeNBBHI9rFrbZEJd13Kc": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetClickStatsLambdaFunction"
               },
-              "CodeSha256": "seagNfbIGA1Rj7HXnSu+eUDtQISPJrmSsGjE0z98o60="
+              "CodeSha256": "4VQeTmBub1bUwiybkvcmWkFVsDkhoGACARQeWrF7n0s="
             }
           },
-          "CountClicksByProductLambdaVersion2i3Pa1C3IssWJ9rkeJwVX31XzFUj5pavkrRYjcICNM": {
+          "CountClicksByProductLambdaVersion7VT7jWk2MSOSAMI5s1BuOqKAiAnEhTRiNHScSgnMIjs": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CountClicksByProductLambdaFunction"
               },
-              "CodeSha256": "seagNfbIGA1Rj7HXnSu+eUDtQISPJrmSsGjE0z98o60="
+              "CodeSha256": "4VQeTmBub1bUwiybkvcmWkFVsDkhoGACARQeWrF7n0s="
             }
           },
-          "GetCommentStatsByProductLambdaVersioneqZufxt4nApumVStV3XiiTKic5Sx3Wude2T84fXGWs": {
+          "GetCommentStatsByProductLambdaVersionVfsl1rQ4ZM6G9QP1Ish7CdMDsWPjTZ7X4QRObazg": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetCommentStatsByProductLambdaFunction"
               },
-              "CodeSha256": "seagNfbIGA1Rj7HXnSu+eUDtQISPJrmSsGjE0z98o60="
+              "CodeSha256": "4VQeTmBub1bUwiybkvcmWkFVsDkhoGACARQeWrF7n0s="
             }
           },
-          "CreateCommentLambdaVersionVf8VaGZXx7OQlaqNbOF0sVvI91ID431WFRmQpDC3Aw": {
+          "CreateCommentLambdaVersionMHapkqIpoo2zkrhyQsNDoRiCHJKeUUzkjjzBMgr8YSY": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreateCommentLambdaFunction"
               },
-              "CodeSha256": "seagNfbIGA1Rj7HXnSu+eUDtQISPJrmSsGjE0z98o60="
+              "CodeSha256": "4VQeTmBub1bUwiybkvcmWkFVsDkhoGACARQeWrF7n0s="
             }
           },
-          "GetCommentsByProductLambdaVersionIzr2qp1OkveuZSrEUlHwe6RdzDY5QUa2Cn5re1U": {
+          "GetCommentsByProductLambdaVersionJkaO7KfuK6nRk0CMemE6bcnxxKo1WJKy6dQZJKWMm5o": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetCommentsByProductLambdaFunction"
               },
-              "CodeSha256": "seagNfbIGA1Rj7HXnSu+eUDtQISPJrmSsGjE0z98o60="
+              "CodeSha256": "4VQeTmBub1bUwiybkvcmWkFVsDkhoGACARQeWrF7n0s="
             }
           },
-          "GetProductByIdLambdaVersionPJ06PPQ4zrtpl3GeLg6EVPiIo2j8vmuCOTxQjOyzs": {
+          "GetProductByIdLambdaVersionuSOpn1JgSrJUXD2BqXA9P9TqcvymxTH2TyUZyU7iEEw": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetProductByIdLambdaFunction"
               },
-              "CodeSha256": "seagNfbIGA1Rj7HXnSu+eUDtQISPJrmSsGjE0z98o60="
+              "CodeSha256": "4VQeTmBub1bUwiybkvcmWkFVsDkhoGACARQeWrF7n0s="
             }
           },
-          "CreateProductLambdaVersionYyavZQjkntqg8N9kJ1f9RQsezwsK6S75vun3cUsKFfY": {
+          "CreateProductLambdaVersiondd8P5mSJCf78V94AUa15oRe4Y7103iJW24GWmVKJRo": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreateProductLambdaFunction"
               },
-              "CodeSha256": "seagNfbIGA1Rj7HXnSu+eUDtQISPJrmSsGjE0z98o60="
+              "CodeSha256": "4VQeTmBub1bUwiybkvcmWkFVsDkhoGACARQeWrF7n0s="
             }
           },
-          "UpdateProductLambdaVersionTZN10NxrHhdG3uykWJfpoNqBYkneuQ8amehLKwgc": {
+          "UpdateProductLambdaVersionPkJQ8pTnnekJo9PkBuoWMjEkg58stcdNetYNhEEXq0": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "UpdateProductLambdaFunction"
               },
-              "CodeSha256": "seagNfbIGA1Rj7HXnSu+eUDtQISPJrmSsGjE0z98o60="
+              "CodeSha256": "4VQeTmBub1bUwiybkvcmWkFVsDkhoGACARQeWrF7n0s="
             }
           },
-          "DeleteProductLambdaVersionRpWKqV5A7IxqoMXiq0RXOp4Mi5Azeh4ZTjRUXdfe3M": {
+          "DeleteProductLambdaVersionrYo0C2DcidxxmCY9UgUG6HpDpZH70B4yZqBgWJYwTLM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "DeleteProductLambdaFunction"
               },
-              "CodeSha256": "seagNfbIGA1Rj7HXnSu+eUDtQISPJrmSsGjE0z98o60="
+              "CodeSha256": "4VQeTmBub1bUwiybkvcmWkFVsDkhoGACARQeWrF7n0s="
             }
           },
-          "DeleteAdminLambdaVersionwtl0oUYPvZnO9tPq3OiDMkweb1WT1rjdimIZuEc0": {
+          "DeleteAdminLambdaVersionuakHqs5r1XsxMrAWsxmgtq52Pkz0n0ZPRzqktnun5Y": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "DeleteAdminLambdaFunction"
               },
-              "CodeSha256": "seagNfbIGA1Rj7HXnSu+eUDtQISPJrmSsGjE0z98o60="
+              "CodeSha256": "4VQeTmBub1bUwiybkvcmWkFVsDkhoGACARQeWrF7n0s="
             }
           },
-          "SetAdminFechaExpiracionLambdaVersionsKpfJ1rPxjNNywDpEzmvnaI80W6Ou1I8xmGQbrp8Yw": {
+          "SetAdminFechaExpiracionLambdaVersioneIw1PoibTic1mqCZ6HUfnoUVJ81fW1dYP0GORIj36o": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "SetAdminFechaExpiracionLambdaFunction"
               },
-              "CodeSha256": "seagNfbIGA1Rj7HXnSu+eUDtQISPJrmSsGjE0z98o60="
+              "CodeSha256": "4VQeTmBub1bUwiybkvcmWkFVsDkhoGACARQeWrF7n0s="
             }
           },
-          "SetAdminActiveLambdaVersionQWor3kw7e2yeHzuNHIxJfwbOJN6oHqz8n1aFwDB7Ms": {
+          "SetAdminActiveLambdaVersionbEoQo82CDu4DR0Oh1PPbKiqBcW4AHh3AtbtinTc": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "SetAdminActiveLambdaFunction"
               },
-              "CodeSha256": "seagNfbIGA1Rj7HXnSu+eUDtQISPJrmSsGjE0z98o60="
+              "CodeSha256": "4VQeTmBub1bUwiybkvcmWkFVsDkhoGACARQeWrF7n0s="
             }
           },
-          "DesactivarAdminsVencidosLambdaVersionhU9PTSh5mpruv3bP65OYAvGf6uoBM5IBHrz10l5qDic": {
+          "DesactivarAdminsVencidosLambdaVersionppPj9E900jwzAkNsBJEkgy4idFg6XQETFDSzYkztM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "DesactivarAdminsVencidosLambdaFunction"
               },
-              "CodeSha256": "seagNfbIGA1Rj7HXnSu+eUDtQISPJrmSsGjE0z98o60=",
+              "CodeSha256": "4VQeTmBub1bUwiybkvcmWkFVsDkhoGACARQeWrF7n0s=",
               "Description": "Desactiva automáticamente los admins vencidos todos los días a las 2am UTC"
             }
           },
-          "ChangeAdminPasswordLambdaVersionop9MMgmb0Se8xNpJPJHxZApZNKewKENGUszvdNhNzw": {
+          "ChangeAdminPasswordLambdaVersionNQ5Tnsh5HHAOs6yQ9cFtCAL5epriQFa210mcOYjwmUg": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ChangeAdminPasswordLambdaFunction"
               },
-              "CodeSha256": "seagNfbIGA1Rj7HXnSu+eUDtQISPJrmSsGjE0z98o60="
+              "CodeSha256": "4VQeTmBub1bUwiybkvcmWkFVsDkhoGACARQeWrF7n0s="
             }
           },
           "DesactivarAdminsVencidosEventsRuleSchedule1": {
@@ -2731,7 +2750,7 @@
               "ChangeAdminPasswordLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1756739607253": {
+          "ApiGatewayDeployment1756760901113": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -3437,7 +3456,7 @@
           "AdminLoginLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AdminLoginLambdaVersion3tBTkaCl0jz72w14QvTyE2qcHv3RxOlUrGQ9ubQ"
+              "Ref": "AdminLoginLambdaVersionRXuc8FCzwMpegveAxCjCkHGCTWLFn0pTEwP5DkJOrs"
             },
             "Export": {
               "Name": "sls-backend-tienda-serverless-dev-AdminLoginLambdaFunctionQualifiedArn"
@@ -3446,7 +3465,7 @@
           "AdminRegisterLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AdminRegisterLambdaVersion1fgCQqUBuENpEL240A8y2nAlZvlaL9LXRiLGxWkUs8"
+              "Ref": "AdminRegisterLambdaVersionnOhaHLLxie0CBWkHihgZwjzibwplzQVVysjj6RZM9Y"
             },
             "Export": {
               "Name": "sls-backend-tienda-serverless-dev-AdminRegisterLambdaFunctionQualifiedArn"
@@ -3455,7 +3474,7 @@
           "GetAllProductsLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetAllProductsLambdaVersionvuupBdLzYfx45oDA5R4Ggp4cTfEmclkjehWckIFEs"
+              "Ref": "GetAllProductsLambdaVersionz1yHAb3OgYQ97V7CNBLokY4qDzfDz7RBDlLSxfk8"
             },
             "Export": {
               "Name": "sls-backend-tienda-serverless-dev-GetAllProductsLambdaFunctionQualifiedArn"
@@ -3464,7 +3483,7 @@
           "RegisterClickLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "RegisterClickLambdaVersionDX8161ri0mMEWc0EL3gc7PIe2LQO0Qm1CNnQjnTrQec"
+              "Ref": "RegisterClickLambdaVersiong3m27ZC7c06agyqH8J0W30OFbieQoyPzNEes7u5FAI"
             },
             "Export": {
               "Name": "sls-backend-tienda-serverless-dev-RegisterClickLambdaFunctionQualifiedArn"
@@ -3473,7 +3492,7 @@
           "GetClickStatsLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetClickStatsLambdaVersionHctGIx7BokjCZr1rlMWmz96q5cVl1QYKkagksWTTtgQ"
+              "Ref": "GetClickStatsLambdaVersion85EBmFLx7RitZJDrScwPujeNBBHI9rFrbZEJd13Kc"
             },
             "Export": {
               "Name": "sls-backend-tienda-serverless-dev-GetClickStatsLambdaFunctionQualifiedArn"
@@ -3482,7 +3501,7 @@
           "CountClicksByProductLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CountClicksByProductLambdaVersion2i3Pa1C3IssWJ9rkeJwVX31XzFUj5pavkrRYjcICNM"
+              "Ref": "CountClicksByProductLambdaVersion7VT7jWk2MSOSAMI5s1BuOqKAiAnEhTRiNHScSgnMIjs"
             },
             "Export": {
               "Name": "sls-backend-tienda-serverless-dev-CountClicksByProductLambdaFunctionQualifiedArn"
@@ -3491,7 +3510,7 @@
           "GetCommentStatsByProductLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetCommentStatsByProductLambdaVersioneqZufxt4nApumVStV3XiiTKic5Sx3Wude2T84fXGWs"
+              "Ref": "GetCommentStatsByProductLambdaVersionVfsl1rQ4ZM6G9QP1Ish7CdMDsWPjTZ7X4QRObazg"
             },
             "Export": {
               "Name": "sls-backend-tienda-serverless-dev-GetCommentStatsByProductLambdaFunctionQualifiedArn"
@@ -3500,7 +3519,7 @@
           "CreateCommentLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreateCommentLambdaVersionVf8VaGZXx7OQlaqNbOF0sVvI91ID431WFRmQpDC3Aw"
+              "Ref": "CreateCommentLambdaVersionMHapkqIpoo2zkrhyQsNDoRiCHJKeUUzkjjzBMgr8YSY"
             },
             "Export": {
               "Name": "sls-backend-tienda-serverless-dev-CreateCommentLambdaFunctionQualifiedArn"
@@ -3509,7 +3528,7 @@
           "GetCommentsByProductLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetCommentsByProductLambdaVersionIzr2qp1OkveuZSrEUlHwe6RdzDY5QUa2Cn5re1U"
+              "Ref": "GetCommentsByProductLambdaVersionJkaO7KfuK6nRk0CMemE6bcnxxKo1WJKy6dQZJKWMm5o"
             },
             "Export": {
               "Name": "sls-backend-tienda-serverless-dev-GetCommentsByProductLambdaFunctionQualifiedArn"
@@ -3518,7 +3537,7 @@
           "GetProductByIdLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetProductByIdLambdaVersionPJ06PPQ4zrtpl3GeLg6EVPiIo2j8vmuCOTxQjOyzs"
+              "Ref": "GetProductByIdLambdaVersionuSOpn1JgSrJUXD2BqXA9P9TqcvymxTH2TyUZyU7iEEw"
             },
             "Export": {
               "Name": "sls-backend-tienda-serverless-dev-GetProductByIdLambdaFunctionQualifiedArn"
@@ -3527,7 +3546,7 @@
           "CreateProductLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreateProductLambdaVersionYyavZQjkntqg8N9kJ1f9RQsezwsK6S75vun3cUsKFfY"
+              "Ref": "CreateProductLambdaVersiondd8P5mSJCf78V94AUa15oRe4Y7103iJW24GWmVKJRo"
             },
             "Export": {
               "Name": "sls-backend-tienda-serverless-dev-CreateProductLambdaFunctionQualifiedArn"
@@ -3536,7 +3555,7 @@
           "UpdateProductLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "UpdateProductLambdaVersionTZN10NxrHhdG3uykWJfpoNqBYkneuQ8amehLKwgc"
+              "Ref": "UpdateProductLambdaVersionPkJQ8pTnnekJo9PkBuoWMjEkg58stcdNetYNhEEXq0"
             },
             "Export": {
               "Name": "sls-backend-tienda-serverless-dev-UpdateProductLambdaFunctionQualifiedArn"
@@ -3545,7 +3564,7 @@
           "DeleteProductLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "DeleteProductLambdaVersionRpWKqV5A7IxqoMXiq0RXOp4Mi5Azeh4ZTjRUXdfe3M"
+              "Ref": "DeleteProductLambdaVersionrYo0C2DcidxxmCY9UgUG6HpDpZH70B4yZqBgWJYwTLM"
             },
             "Export": {
               "Name": "sls-backend-tienda-serverless-dev-DeleteProductLambdaFunctionQualifiedArn"
@@ -3554,7 +3573,7 @@
           "DeleteAdminLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "DeleteAdminLambdaVersionwtl0oUYPvZnO9tPq3OiDMkweb1WT1rjdimIZuEc0"
+              "Ref": "DeleteAdminLambdaVersionuakHqs5r1XsxMrAWsxmgtq52Pkz0n0ZPRzqktnun5Y"
             },
             "Export": {
               "Name": "sls-backend-tienda-serverless-dev-DeleteAdminLambdaFunctionQualifiedArn"
@@ -3563,7 +3582,7 @@
           "SetAdminFechaExpiracionLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "SetAdminFechaExpiracionLambdaVersionsKpfJ1rPxjNNywDpEzmvnaI80W6Ou1I8xmGQbrp8Yw"
+              "Ref": "SetAdminFechaExpiracionLambdaVersioneIw1PoibTic1mqCZ6HUfnoUVJ81fW1dYP0GORIj36o"
             },
             "Export": {
               "Name": "sls-backend-tienda-serverless-dev-SetAdminFechaExpiracionLambdaFunctionQualifiedArn"
@@ -3572,7 +3591,7 @@
           "SetAdminActiveLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "SetAdminActiveLambdaVersionQWor3kw7e2yeHzuNHIxJfwbOJN6oHqz8n1aFwDB7Ms"
+              "Ref": "SetAdminActiveLambdaVersionbEoQo82CDu4DR0Oh1PPbKiqBcW4AHh3AtbtinTc"
             },
             "Export": {
               "Name": "sls-backend-tienda-serverless-dev-SetAdminActiveLambdaFunctionQualifiedArn"
@@ -3581,7 +3600,7 @@
           "DesactivarAdminsVencidosLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "DesactivarAdminsVencidosLambdaVersionhU9PTSh5mpruv3bP65OYAvGf6uoBM5IBHrz10l5qDic"
+              "Ref": "DesactivarAdminsVencidosLambdaVersionppPj9E900jwzAkNsBJEkgy4idFg6XQETFDSzYkztM"
             },
             "Export": {
               "Name": "sls-backend-tienda-serverless-dev-DesactivarAdminsVencidosLambdaFunctionQualifiedArn"
@@ -3590,7 +3609,7 @@
           "ChangeAdminPasswordLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ChangeAdminPasswordLambdaVersionop9MMgmb0Se8xNpJPJHxZApZNKewKENGUszvdNhNzw"
+              "Ref": "ChangeAdminPasswordLambdaVersionNQ5Tnsh5HHAOs6yQ9cFtCAL5epriQFa210mcOYjwmUg"
             },
             "Export": {
               "Name": "sls-backend-tienda-serverless-dev-ChangeAdminPasswordLambdaFunctionQualifiedArn"
@@ -3757,7 +3776,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "AdminLoginLambdaVersion3tBTkaCl0jz72w14QvTyE2qcHv3RxOlUrGQ9ubQ"
+        "versionLogicalId": "AdminLoginLambdaVersionRXuc8FCzwMpegveAxCjCkHGCTWLFn0pTEwP5DkJOrs"
       },
       "adminRegister": {
         "handler": "src/functions/admin/register.handler",
@@ -3796,7 +3815,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "AdminRegisterLambdaVersion1fgCQqUBuENpEL240A8y2nAlZvlaL9LXRiLGxWkUs8"
+        "versionLogicalId": "AdminRegisterLambdaVersionnOhaHLLxie0CBWkHihgZwjzibwplzQVVysjj6RZM9Y"
       },
       "getAllProducts": {
         "handler": "src/functions/product/getAll.handler",
@@ -3835,7 +3854,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "GetAllProductsLambdaVersionvuupBdLzYfx45oDA5R4Ggp4cTfEmclkjehWckIFEs"
+        "versionLogicalId": "GetAllProductsLambdaVersionz1yHAb3OgYQ97V7CNBLokY4qDzfDz7RBDlLSxfk8"
       },
       "registerClick": {
         "handler": "src/functions/click/registerClick.handler",
@@ -3874,7 +3893,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "RegisterClickLambdaVersionDX8161ri0mMEWc0EL3gc7PIe2LQO0Qm1CNnQjnTrQec"
+        "versionLogicalId": "RegisterClickLambdaVersiong3m27ZC7c06agyqH8J0W30OFbieQoyPzNEes7u5FAI"
       },
       "getClickStats": {
         "handler": "src/functions/click/getStats.handler",
@@ -3914,7 +3933,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "GetClickStatsLambdaVersionHctGIx7BokjCZr1rlMWmz96q5cVl1QYKkagksWTTtgQ"
+        "versionLogicalId": "GetClickStatsLambdaVersion85EBmFLx7RitZJDrScwPujeNBBHI9rFrbZEJd13Kc"
       },
       "countClicksByProduct": {
         "handler": "src/functions/click/countByProduct.handler",
@@ -3954,7 +3973,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "CountClicksByProductLambdaVersion2i3Pa1C3IssWJ9rkeJwVX31XzFUj5pavkrRYjcICNM"
+        "versionLogicalId": "CountClicksByProductLambdaVersion7VT7jWk2MSOSAMI5s1BuOqKAiAnEhTRiNHScSgnMIjs"
       },
       "getCommentStatsByProduct": {
         "handler": "src/functions/comment/getStatsByProduct.handler",
@@ -3993,7 +4012,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "GetCommentStatsByProductLambdaVersioneqZufxt4nApumVStV3XiiTKic5Sx3Wude2T84fXGWs"
+        "versionLogicalId": "GetCommentStatsByProductLambdaVersionVfsl1rQ4ZM6G9QP1Ish7CdMDsWPjTZ7X4QRObazg"
       },
       "createComment": {
         "handler": "src/functions/comment/create.handler",
@@ -4032,7 +4051,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "CreateCommentLambdaVersionVf8VaGZXx7OQlaqNbOF0sVvI91ID431WFRmQpDC3Aw"
+        "versionLogicalId": "CreateCommentLambdaVersionMHapkqIpoo2zkrhyQsNDoRiCHJKeUUzkjjzBMgr8YSY"
       },
       "getCommentsByProduct": {
         "handler": "src/functions/comment/getByProduct.handler",
@@ -4071,7 +4090,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "GetCommentsByProductLambdaVersionIzr2qp1OkveuZSrEUlHwe6RdzDY5QUa2Cn5re1U"
+        "versionLogicalId": "GetCommentsByProductLambdaVersionJkaO7KfuK6nRk0CMemE6bcnxxKo1WJKy6dQZJKWMm5o"
       },
       "getProductById": {
         "handler": "src/functions/product/getById.handler",
@@ -4110,7 +4129,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "GetProductByIdLambdaVersionPJ06PPQ4zrtpl3GeLg6EVPiIo2j8vmuCOTxQjOyzs"
+        "versionLogicalId": "GetProductByIdLambdaVersionuSOpn1JgSrJUXD2BqXA9P9TqcvymxTH2TyUZyU7iEEw"
       },
       "createProduct": {
         "handler": "src/functions/product/create.handler",
@@ -4150,7 +4169,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "CreateProductLambdaVersionYyavZQjkntqg8N9kJ1f9RQsezwsK6S75vun3cUsKFfY"
+        "versionLogicalId": "CreateProductLambdaVersiondd8P5mSJCf78V94AUa15oRe4Y7103iJW24GWmVKJRo"
       },
       "updateProduct": {
         "handler": "src/functions/product/update.handler",
@@ -4190,7 +4209,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "UpdateProductLambdaVersionTZN10NxrHhdG3uykWJfpoNqBYkneuQ8amehLKwgc"
+        "versionLogicalId": "UpdateProductLambdaVersionPkJQ8pTnnekJo9PkBuoWMjEkg58stcdNetYNhEEXq0"
       },
       "deleteProduct": {
         "handler": "src/functions/product/delete.handler",
@@ -4230,7 +4249,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "DeleteProductLambdaVersionRpWKqV5A7IxqoMXiq0RXOp4Mi5Azeh4ZTjRUXdfe3M"
+        "versionLogicalId": "DeleteProductLambdaVersionrYo0C2DcidxxmCY9UgUG6HpDpZH70B4yZqBgWJYwTLM"
       },
       "deleteAdmin": {
         "handler": "src/functions/admin/delete.handler",
@@ -4270,7 +4289,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "DeleteAdminLambdaVersionwtl0oUYPvZnO9tPq3OiDMkweb1WT1rjdimIZuEc0"
+        "versionLogicalId": "DeleteAdminLambdaVersionuakHqs5r1XsxMrAWsxmgtq52Pkz0n0ZPRzqktnun5Y"
       },
       "setAdminFechaExpiracion": {
         "handler": "src/functions/admin/setFechaExpiracion.handler",
@@ -4310,7 +4329,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "SetAdminFechaExpiracionLambdaVersionsKpfJ1rPxjNNywDpEzmvnaI80W6Ou1I8xmGQbrp8Yw"
+        "versionLogicalId": "SetAdminFechaExpiracionLambdaVersioneIw1PoibTic1mqCZ6HUfnoUVJ81fW1dYP0GORIj36o"
       },
       "setAdminActive": {
         "handler": "src/functions/admin/setActive.handler",
@@ -4350,7 +4369,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "SetAdminActiveLambdaVersionQWor3kw7e2yeHzuNHIxJfwbOJN6oHqz8n1aFwDB7Ms"
+        "versionLogicalId": "SetAdminActiveLambdaVersionbEoQo82CDu4DR0Oh1PPbKiqBcW4AHh3AtbtinTc"
       },
       "desactivarAdminsVencidos": {
         "handler": "src/functions/admin/desactivarVencidos.handler",
@@ -4374,7 +4393,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "DesactivarAdminsVencidosLambdaVersionhU9PTSh5mpruv3bP65OYAvGf6uoBM5IBHrz10l5qDic"
+        "versionLogicalId": "DesactivarAdminsVencidosLambdaVersionppPj9E900jwzAkNsBJEkgy4idFg6XQETFDSzYkztM"
       },
       "changeAdminPassword": {
         "handler": "src/functions/admin/changePassword.handler",
@@ -4414,7 +4433,7 @@
         "timeout": 6,
         "runtime": "nodejs20.x",
         "vpc": {},
-        "versionLogicalId": "ChangeAdminPasswordLambdaVersionop9MMgmb0Se8xNpJPJHxZApZNKewKENGUszvdNhNzw"
+        "versionLogicalId": "ChangeAdminPasswordLambdaVersionNQ5Tnsh5HHAOs6yQ9cFtCAL5epriQFa210mcOYjwmUg"
       }
     },
     "configValidationMode": "warn",
@@ -4450,7 +4469,7 @@
     "artifact": "C:\\Users\\mario\\Documents\\Tienda\\Backend_Tienda_Serverless\\.serverless\\backend-tienda-serverless.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/backend-tienda-serverless/dev/1756739625357-2025-09-01T15:13:45.357Z",
+    "artifactDirectoryName": "serverless/backend-tienda-serverless/dev/1756760918666-2025-09-01T21:08:38.666Z",
     "artifact": "backend-tienda-serverless.zip"
   }
 }
