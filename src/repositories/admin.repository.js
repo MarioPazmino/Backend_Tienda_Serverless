@@ -5,6 +5,15 @@ class AdminRepository {
         return Admin.findOne({ username });
     }
 
+    async create({ username, password, role = 'admin' }) {
+        const admin = new Admin({ username, password, role });
+        await admin.save();
+        // return without password
+        const result = admin.toObject();
+        delete result.password;
+        return result;
+    }
+
     async find(filter = {}) {
         // Excluir password por seguridad
         return Admin.find(filter).select('-password').lean();
