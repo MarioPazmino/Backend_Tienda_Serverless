@@ -5,6 +5,11 @@ class AdminRepository {
         return Admin.findOne({ username });
     }
 
+    async find(filter = {}) {
+        // Excluir password por seguridad
+        return Admin.find(filter).select('-password').lean();
+    }
+
     async setActive(id, activo) {
         return Admin.findByIdAndUpdate(id, { activo }, { new: true });
     }

@@ -193,6 +193,15 @@ functions:
           method: post
           cors: true
           private: true
+  listAdmins:
+    handler: src/functions/admin/listAdmins.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
+    events:
+      - http:
+          path: admin/list
+          method: get
+          cors: true
 plugins:
   - serverless-dotenv-plugin
   - serverless-prune-plugin

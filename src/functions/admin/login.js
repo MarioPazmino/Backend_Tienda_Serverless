@@ -39,7 +39,7 @@ module.exports.handler = async (event) => {
         body: JSON.stringify({ error: 'Credenciales inválidas' })
       };
     }
-  const token = jwt.sign({ id: admin._id, username: admin.username }, process.env.JWT_SECRET, { expiresIn: '8h' });
+  const token = jwt.sign({ id: admin._id, username: admin.username, role: admin.role }, process.env.JWT_SECRET, { expiresIn: '8h' });
     return {
       statusCode: 200,
       headers: corsHeaders,

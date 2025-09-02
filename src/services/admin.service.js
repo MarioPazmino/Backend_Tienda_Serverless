@@ -28,6 +28,10 @@ class AdminService {
     async changePassword(id, newPassword) {
         return adminRepository.updatePassword(id, newPassword);
     }
+
+    async find(filter = {}) {
+        return adminRepository.find(filter);
+    }
 }
 
 module.exports = new AdminService();
