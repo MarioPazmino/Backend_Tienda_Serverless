@@ -154,6 +154,16 @@ functions:
           method: delete
           cors: true
           private: true
+  updateAdmin:
+    handler: src/functions/admin/update.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
+    events:
+      - http:
+          path: admin/{id}
+          method: put
+          cors: true
+          private: true
   setAdminFechaExpiracion:
     handler: src/functions/admin/setFechaExpiracion.handler
     layers:

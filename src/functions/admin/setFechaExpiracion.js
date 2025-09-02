@@ -22,6 +22,22 @@ module.exports.handler = async (event) => {
       };
     }
 
+    const authHeader = event.headers?.Authorization || event.headers?.authorization;
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+      return { statusCode: 401, body: JSON.stringify({ error: 'No autorizado' }) };
+    }
+    const token = authHeader.slice(7);
+    let payload;
+    try {
+      payload = require('jsonwebtoken').verify(token, process.env.JWT_SECRET);
+    } catch (e) {
+      return { statusCode: 401, body: JSON.stringify({ error: 'Token inválido' }) };
+    }
+
+    if (payload.role !== 'superadmin') {
+      return { statusCode: 403, body: JSON.stringify({ error: 'Solo superadmin puede cambiar fecha de expiración' }) };
+    }
+
     // Sanitizar id
     const cleanId = sanitizeHtml(id);
 

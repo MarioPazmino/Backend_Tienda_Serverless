@@ -39,6 +39,21 @@ class AdminRepository {
         await admin.save();
         return admin;
     }
+
+    async updateAdmin(id, fields = {}) {
+        const admin = await Admin.findById(id);
+        if (!admin) return null;
+        // Only update allowed fields
+        if (fields.username) admin.username = fields.username;
+        if (fields.password) admin.password = fields.password;
+        if (fields.role) admin.role = fields.role;
+        if (typeof fields.activo !== 'undefined') admin.activo = fields.activo;
+        if (fields.fechaExpiracion) admin.fechaExpiracion = fields.fechaExpiracion;
+        await admin.save();
+        const result = admin.toObject();
+        delete result.password;
+        return result;
+    }
 }
 
 module.exports = new AdminRepository();

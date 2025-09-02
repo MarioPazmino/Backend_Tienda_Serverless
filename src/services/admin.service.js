@@ -29,6 +29,10 @@ class AdminService {
         return adminRepository.updatePassword(id, newPassword);
     }
 
+    async updateAdmin(id, fields) {
+        return adminRepository.updateAdmin(id, fields);
+    }
+
     async find(filter = {}) {
         return adminRepository.find(filter);
     }
