@@ -4,6 +4,17 @@ const Joi = require('joi');
 const sanitizeHtml = require('sanitize-html');
 
 module.exports.handler = async (event) => {
+  const corsHeaders = {
+    'Access-Control-Allow-Origin': process.env.CORS_ORIGIN || '*',
+    'Access-Control-Allow-Credentials': true,
+    'Access-Control-Allow-Headers': 'Content-Type,Authorization',
+    'Access-Control-Allow-Methods': 'PUT,OPTIONS'
+  };
+
+  if (event.httpMethod === 'OPTIONS') {
+    return { statusCode: 204, headers: corsHeaders, body: '' };
+  }
+
   try {
     await connect();
     const { id } = event.pathParameters;
@@ -20,30 +31,31 @@ module.exports.handler = async (event) => {
     if (error) {
       return {
         statusCode: 400,
+        headers: corsHeaders,
         body: JSON.stringify({ error: error.details[0].message })
       };
     }
 
     const authHeader = event.headers?.Authorization || event.headers?.authorization;
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
-      return { statusCode: 401, body: JSON.stringify({ error: 'No autorizado' }) };
+      return { statusCode: 401, headers: corsHeaders, body: JSON.stringify({ error: 'No autorizado' }) };
     }
     const token = authHeader.slice(7);
     let payload;
     try {
       payload = require('jsonwebtoken').verify(token, process.env.JWT_SECRET);
     } catch (e) {
-      return { statusCode: 401, body: JSON.stringify({ error: 'Token inválido' }) };
+      return { statusCode: 401, headers: corsHeaders, body: JSON.stringify({ error: 'Token inválido' }) };
     }
 
     // Admins can only update their own record; superadmin can update anyone
     if (payload.role === 'admin' && payload.id !== id) {
-      return { statusCode: 403, body: JSON.stringify({ error: 'No tienes permiso para editar este administrador' }) };
+      return { statusCode: 403, headers: corsHeaders, body: JSON.stringify({ error: 'No tienes permiso para editar este administrador' }) };
     }
 
     // If admin attempts to set role to superadmin, forbid
     if (value.role === 'superadmin' && payload.role !== 'superadmin') {
-      return { statusCode: 403, body: JSON.stringify({ error: 'No puedes asignar rol superadmin' }) };
+      return { statusCode: 403, headers: corsHeaders, body: JSON.stringify({ error: 'No puedes asignar rol superadmin' }) };
     }
 
     // Sanitizar campos
@@ -54,11 +66,11 @@ module.exports.handler = async (event) => {
 
     const updated = await adminService.updateAdmin(id, fields);
     if (!updated) {
-      return { statusCode: 404, body: JSON.stringify({ error: 'Administrador no encontrado' }) };
+      return { statusCode: 404, headers: corsHeaders, body: JSON.stringify({ error: 'Administrador no encontrado' }) };
     }
 
-    return { statusCode: 200, body: JSON.stringify({ message: 'Administrador actualizado', admin: updated }) };
+    return { statusCode: 200, headers: Object.assign({ 'Content-Type': 'application/json' }, corsHeaders), body: JSON.stringify({ message: 'Administrador actualizado', admin: updated }) };
   } catch (err) {
-    return { statusCode: 400, body: JSON.stringify({ error: err.message }) };
+    return { statusCode: 400, headers: corsHeaders, body: JSON.stringify({ error: err.message }) };
   }
 };

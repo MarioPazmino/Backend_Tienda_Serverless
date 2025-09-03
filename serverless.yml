@@ -153,7 +153,15 @@ functions:
           path: admin/{id}
           method: delete
           cors: true
-          private: true
+  getAdminById:
+    handler: src/functions/admin/getById.handler
+    layers:
+      - { Ref: NodeModulesLambdaLayer }
+    events:
+      - http:
+          path: admin/{id}
+          method: get
+          cors: true
   updateAdmin:
     handler: src/functions/admin/update.handler
     layers:
@@ -163,7 +171,6 @@ functions:
           path: admin/{id}
           method: put
           cors: true
-          private: true
   setAdminFechaExpiracion:
     handler: src/functions/admin/setFechaExpiracion.handler
     layers:
@@ -173,7 +180,6 @@ functions:
           path: admin/{id}/fecha-expiracion
           method: patch
           cors: true
-          private: true
   setAdminActive:
     handler: src/functions/admin/setActive.handler
     layers:
@@ -183,7 +189,6 @@ functions:
           path: admin/{id}/active
           method: patch
           cors: true
-          private: true
   desactivarAdminsVencidos:
     handler: src/functions/admin/desactivarVencidos.handler
     layers:
@@ -202,7 +207,6 @@ functions:
           path: admin/change-password
           method: post
           cors: true
-          private: true
   listAdmins:
     handler: src/functions/admin/listAdmins.handler
     layers:

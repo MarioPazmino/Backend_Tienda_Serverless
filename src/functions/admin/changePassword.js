@@ -5,6 +5,17 @@ const Joi = require('joi');
 const sanitizeHtml = require('sanitize-html');
 
 module.exports.handler = async (event) => {
+  const corsHeaders = {
+    'Access-Control-Allow-Origin': process.env.CORS_ORIGIN || '*',
+    'Access-Control-Allow-Credentials': true,
+    'Access-Control-Allow-Headers': 'Content-Type,Authorization',
+    'Access-Control-Allow-Methods': 'POST,OPTIONS'
+  };
+
+  if (event.httpMethod === 'OPTIONS') {
+    return { statusCode: 204, headers: corsHeaders, body: '' };
+  }
+
   try {
     await connect();
     const body = typeof event.body === 'string' ? JSON.parse(event.body) : event.body;
@@ -17,25 +28,26 @@ module.exports.handler = async (event) => {
     if (error) {
       return {
         statusCode: 400,
+        headers: corsHeaders,
         body: JSON.stringify({ error: error.details[0].message })
       };
     }
 
     const authHeader = event.headers?.Authorization || event.headers?.authorization;
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
-      return { statusCode: 401, body: JSON.stringify({ error: 'No autorizado' }) };
+      return { statusCode: 401, headers: corsHeaders, body: JSON.stringify({ error: 'No autorizado' }) };
     }
     const token = authHeader.slice(7);
     let payload;
     try {
       payload = require('jsonwebtoken').verify(token, process.env.JWT_SECRET);
     } catch (e) {
-      return { statusCode: 401, body: JSON.stringify({ error: 'Token inválido' }) };
+      return { statusCode: 401, headers: corsHeaders, body: JSON.stringify({ error: 'Token inválido' }) };
     }
 
     // If admin role, only allow changing own password
     if (payload.role === 'admin' && payload.id !== value.id) {
-      return { statusCode: 403, body: JSON.stringify({ error: 'No tienes permiso para cambiar esta contraseña' }) };
+      return { statusCode: 403, headers: corsHeaders, body: JSON.stringify({ error: 'No tienes permiso para cambiar esta contraseña' }) };
     }
 
     // Sanitizar id (por si acaso)
@@ -44,11 +56,13 @@ module.exports.handler = async (event) => {
     await adminService.changePassword(value.id, value.newPassword);
     return {
       statusCode: 200,
+      headers: Object.assign({ 'Content-Type': 'application/json' }, corsHeaders),
       body: JSON.stringify({ message: 'Contraseña actualizada correctamente.' })
     };
   } catch (err) {
     return {
       statusCode: 400,
+      headers: corsHeaders,
       body: JSON.stringify({ error: err.message })
     };
   }
